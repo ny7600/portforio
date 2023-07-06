@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- slick -->
+    <link rel="stylesheet" href="./assets/slick/slick.css">
+    <link rel="stylesheet" href="./assets/slick/slick-theme.css">
+  
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/stylesheet/style.css">
+    <link rel="icon" href="./assets/favicon/favicon (3).ico">
+
+    <link rel="stylesheet" href="./assets/stylesheet/responsive-767.css">
+    <link rel="stylesheet" href="./assets/stylesheet/responsive-1023.css">
+    <link rel="stylesheet" href="./assets/stylesheet/responsive-1280.css">
+  
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Julius+Sans+One&family=Libre+Baskerville:ital@1&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    
+    <!-- スマホ用アイコン -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+    <title>Narata's Cafe | </title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header right">
+      <div class="container">
+        
+        <!-- header logo -->
+        <div class="header-logo-area">
+          <a href="index.html">
+            <img class="header-logo" src="./assets/images/main-logo.png" alt="ロゴ">
+            <h1 class="header-logo-text en">Narata's Cafe</h1>
+          </a>
+          <picture>
+            <source src="" minwidth="">
+            <source src="" minwidth="">
+          </picture>
+        </div>
+    
+        <!-- header nav -->
+        <div class="header-nav-area">
+          <ul class="header-nav-list en">
+            <li>
+              <a href="index.html">HOME</a>
+            </li>
+            <li>
+              <a href="menu.html">MENU</a>
+            </li>
+            <li>
+              <a href="goods.html">GOODS</a>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
+    </header>
+  
+    <!-- humburger -->
+    <div id="burger-icon">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  
+    <div id="burger-menu">
+      <div class="burger-menu-inner">
+        <div class="burger-list-area">
+          <ul class="burger-list en">
+            <li>
+              <a href="index.html">HOME</a>
+            </li>
+            <li>
+              <a href="menu.html">MENU</a>
+            </li>
+            <li>
+              <a href="goods.html">GOODS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="luxy">
+      <main class="main right detail">
+        <div class="d-main-visual">
+
+        </div>
+
+        <div class="container">
+          <div class="section-headline-wrapper">
+            <h1 class="section-headline">Reservation</h1>
+          </div>
+  
+          <p class="section-main-text">
+            ご予約は下記フォームをご入力の上、「送信する」を押してください。
+          </p>
+          
+          <ul class="time-table">
+            <li>
+              ご利用できる時間帯
+            </li>
+            <li>
+              ①　9:00 ~ 11:00
+            </li>
+            <li>
+              ②　11:10 ~ 13:10
+            </li>
+            <li>
+              ③　13:20 ~ 15:20
+            </li>
+            <li>
+              ④　15:30 ~ 17:30
+            </li>
+            <li>
+              ⑤　15:40 ~ 17:40
+            </li>
+            <li>
+              ⑥　17:50 ~ 19:50 (L.O 19:30)
+            </li>
+          </ul>
+  
+          <form class="reserve-form" action="" method="post">
+            <table>
+  
+              <tr>
+                <th>
+                  <label for="name">
+                    お名前
+                  </label>
+                </th>
+                <td>
+                  <input class="input-text" type="name" id="name">
+                </td>
+              </tr>
+  
+              <tr>
+                <th>
+                  <label for="tel">
+                    電話番号
+                  </label>
+                </th>
+                <td>
+                  <input class="input-text" type="tel" id="tel">
+                </td>
+              </tr>
+  
+              <tr>
+                <th>
+                  <label for="email">
+                    メールアドレス
+                  </label>
+                </th>
+                <td>
+                  <input class="input-text" type="email" id="email">
+                </td>
+              </tr>
+  
+              <tr>
+                <th>
+                    お席の種類
+                </th>
+                <td>
+                  <label class="radio">
+                    <input type="radio" id="seat" name="seat">カウンター席
+                  </label>
+                  <label class="radio">
+                    <input type="radio" id="seat" name="seat">テーブル席
+                  </label>
+                </td>
+              </tr>
+
+              <tr>
+                <th>
+                  時間帯
+                </th>
+                <td>
+                  <select class="select" name="" id="">
+                    <option value="">①　9:00 ~ 11:00</option>
+                    <option value="">②　11:10 ~ 13:10</option>
+                    <option value="">③　13:20 ~ 15:20</option>
+                    <option value="">④　15:30 ~ 17:30</option>
+                    <option value="">⑤　15:40 ~ 17:40</option>
+                    <option value="">⑥　17:50 ~ 19:50 (L.O 19:30)</option>
+                  </select>
+                </td>
+              </tr>
+  
+              <tr>
+                <th>
+                  <label for="textarea">
+                    その他
+                  </label>
+                </th>
+                <td>
+                  <textarea name=""  id="textarea" cols="30" rows="10" placeholder="その他のご要望がありましたらご記載ください。"></textarea>
+                </td>
+              </tr>
+              
+            </table>
+            
+            <button>
+              <input class="form-btn" type="submit" value="送信する">
+            </button>
+          </form>
+    
+          <div class="about-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5268.744241454563!2d140.87924151096027!3d38.26061807601036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a28180c510b87%3A0xb2a30b91be1ffdbc!2z5LuZ5Y-w6aeF!5e0!3m2!1sja!2sjp!4v1688441857229!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+  
+        </div>
+      </main>
+  
+      <!-- footer -->
+      <footer class="footer right">
+        <div class="container">
+          <small>© Narata's Cafe</small>
+        </div>
+      </footer> 
+    </div>
+    
+    <!-- main.js -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- luxy-js -->
+    <script src="./assets/js/luxy.js" charset="utf-8"></script>
+    <script>
+      luxy.init({
+        wrapper: '#luxy', //慣性スクロールを包括する要素のID
+        targets : '.luxy-el', //パララックスの要素のclass名
+        wrapperSpeed:  0.08 //スクロールスピード
+      });
+    </script>
+  </body>
+</html>

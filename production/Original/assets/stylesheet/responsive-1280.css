@@ -1,0 +1,61 @@
+@media screen and (min-width: 1192px) {
+  .more-wrapper .more {
+    font-size: 18px;
+  }
+  .detail .container .reserve-form table {
+    margin: 0 auto;
+  }
+  .detail .container .reserve-form table tr th {
+    width: 20%;
+    padding: 10px 30px;
+  }
+  .detail .container .reserve-form table tr th label {
+    font-size: 18px;
+  }
+  .detail .container .reserve-form table tr td {
+    padding: 10px 30px;
+  }
+  .detail .container .reserve-form table tr td .input-text, .detail .container .reserve-form table tr td #textarea, .detail .container .reserve-form table tr td .select {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #efefef;
+  }
+  .detail .container .reserve-form table tr td .input-text, .detail .container .reserve-form table tr td .select {
+    width: 300px;
+  }
+  .detail .container .reserve-form table tr td .radio + .radio {
+    margin-left: 20px;
+  }
+  .detail .container .reserve-form table tr td #textarea {
+    width: 500px;
+  }
+  .detail .container .reserve-form button {
+    display: block;
+    margin: 0 auto;
+  }
+  .detail .container .reserve-form button .form-btn {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .detail .container .tabs .tab-contents .tab-contents-item ul li {
+    padding: 20px;
+  }
+  .detail .container .tabs .tab-contents .tab-contents-item ul li figcaption {
+    display: flex;
+    gap: 20px;
+  }
+  .detail .container .tabs .tab-contents .tab-contents-item ul li figcaption .goods-item-titile {
+    font-size: 18px;
+  }
+  .detail .container .tabs .tab-contents .tab-contents-item ul li figcaption .goods-item-price {
+    font-size: 18px;
+  }
+  .detail .container .d-menu-list .d-menu-item figcaption .menu-item-titile {
+    font-size: 18px;
+  }
+  .detail .container .d-menu-list .d-menu-item figcaption .menu-item-price {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=responsive-1280.css.map */

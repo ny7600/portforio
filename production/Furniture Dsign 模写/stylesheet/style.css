@@ -1,0 +1,342 @@
+@charset "UTF-8" ;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: block;
+  color: #333;
+  transition: all 0.3s;
+}
+a:hover {
+  opacity: 0.7;
+}
+p {
+  font-size: 12px;
+}
+body {
+  color: #333;
+  font-size: 0.875rem;
+  min-height: 100vh;
+  height: auto;
+  /* position: relative; */
+}
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: aliceblue;
+}
+.header-container {
+  display: flex;
+  height: 80px;
+  align-items: center;
+}
+.header-logo img {
+  display: block;
+  width: 180px;
+  height: 25px;
+}
+header nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.list-nav-header {
+  margin: 50px 0 0 50px;
+}
+.list-nav-header li {
+  margin-bottom: 15px;
+}
+.burger {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/menu.svg);
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.burger:hover {
+  background-color: #ddd;
+} 
+.burger.is-active {
+  background-image: url(../img/close.svg);
+  background-color: #fff;
+}
+.menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.9;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+.menu a {
+  color: #fff;
+}
+.menu.is-active {
+  display: flex;
+}
+
+/* main */
+.main {
+  margin-bottom: 70px;
+  padding-top: 80px;
+  background-color: aliceblue;
+  height: auto;
+  margin-bottom: 100px;
+}
+.page-title {
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.product {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; */
+  display: grid;
+  grid-template:
+    " item item item item"1fr 
+    " item item item item"1fr 
+    / 1fr  1fr  1fr  1fr;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+.product .item {
+  width: 100%;
+  
+}
+.product .item + .item {
+  margin-right: 20px;
+}
+main section a {
+  grid-area: item;
+}
+.main img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+.more {
+  text-align: center;
+}
+
+
+/* footer */
+.footer {
+  height: auto;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 10px 40px;
+  /* position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0; */
+ 
+}
+.footer-left {
+  display: flex;
+}
+.footer-left li {
+  margin-right: 20px;
+}
+
+/* products.html */
+.next {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.next li {
+  padding: 0 20px;
+}
+
+/* content */
+.content {
+  padding-top: 120px;
+  padding-bottom: 160px;
+  max-width: 600px;
+  margin-right: auto;
+}
+.content p {
+  line-height: 1.9;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* company.html */
+.content dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content dt ,dd {
+  padding: 20px 10px;
+  border-bottom: solid 1px #dcdbdb;
+}
+.content dt,dd:last-of-type {
+  border-bottom: none;
+}
+.content dt {
+  width: 30%;
+}
+.content dd {
+  width: 70%;
+}
+iframe {
+  margin-top: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+/* item.html */
+.item-wrapper {
+  padding-top: 40px;
+  padding-bottom: 160px;
+}
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+}
+.item-container img {
+  max-width: 400px;
+  max-height: 400px;
+}
+.item-content {
+  width: 42%;
+}
+.item-txt {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.link-txt {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+.item-container dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item-container dd {
+  width: 70%;
+}
+.item-container dt {
+  width: 30%;
+}
+
+
+/* メディアクエリ設定 */
+
+@media screen and (max-width:900px) {
+  .product {
+    display: grid;
+    grid-template:
+      " item item "1fr 
+      " item item "1fr 
+      / 1fr  1fr ;
+      gap: 50px;
+      margin-bottom: 40px;
+  }
+  main section a {
+    grid-area: item;
+  }
+  .content dd {
+    flex-wrap: wrap;
+  }
+  .content dt {
+    padding-bottom: 0;
+  }
+  .content dt ,dd {
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+.item-container {
+  flex-direction: column;
+}
+.item-container img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.item-container img ,.item-content {
+  width: 100%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

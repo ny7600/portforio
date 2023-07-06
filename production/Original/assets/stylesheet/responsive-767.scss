@@ -1,0 +1,535 @@
+@media screen and (min-width:767px) {
+
+  // 共通
+
+  .br-sp {
+    display: none;
+  }
+
+  .section-headline-wrapper {
+  
+    & .section-headline {
+      margin-bottom: 36px;
+      font-size: 36px;
+      padding: 20px;
+    
+      &::before {
+        width: 50px;
+      }
+    }
+  }
+
+  .more-wrapper {
+
+    & .more {
+      font-size: 24px;
+    }
+  }
+
+  .header {
+
+    & > .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 0;
+  
+      & .header-logo-area {
+        text-align: center;
+        display: flex;
+        align-items: center;
+  
+        & .header-logo {
+          display: block;
+          width: 30px;
+          height: auto;
+          margin-right: 10px;
+        }
+  
+        & .header-logo-text {
+          font-size: 20px;
+        }
+      }
+    
+      & .header-nav-area {
+      
+        & .header-nav-list {
+          display: flex;
+          gap: 30px;
+
+          & li {
+
+            & a {
+              font-size: 16px;
+              display: block;
+            }
+          }
+        }
+      }
+  
+      
+    }
+  }
+
+  #burger-icon {
+    display: none;
+  }
+
+  #burger-menu {
+    display: none;
+  }
+
+  // main
+  .main {
+
+    // TOPIC
+    & .topic {
+      margin-bottom: 20px;
+      padding: 50px 0;
+      width: 100%;
+      
+  
+      & .topic-slide {
+  
+        & .topic-slide-item {
+          margin: 0 20px;
+  
+          & .slide-img {
+            height: 100%;
+            width: 100%;
+          }
+  
+          & .slide-txt-area {
+            text-align: center;
+            margin-top: 30px;
+            color: #efefef;
+
+            & .slide-txt {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+
+    // MENU
+
+    & .menu {
+      margin-bottom: 110px;
+  
+      & .menu-inner {
+  
+        & .menu-list {
+          display: grid;
+          height: 100vh;
+          gap: 10px;
+          grid-template: 
+            "item1 item1 item2 item2" 33%
+            "item3 item3 item3 item4" 33%
+            "item5 item6 item6 item6" 33%
+            / 1fr   1fr   1fr   1fr   ;
+
+          & .menu-item {
+            // padding: 10px;
+              overflow: hidden;
+              border-radius: 8px;
+
+            & img {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+              border-radius: 8px;
+            }
+          }
+
+          & .menu-item  + .menu-item  {
+            margin-top: 0;
+          }
+  
+          & .menu-item1 {
+            grid-area: item1;
+          }
+  
+          & .menu-item2 {
+            grid-area: item2;
+            display: block;
+          }
+  
+          & .menu-item3 {
+            grid-area: item3;
+            display: block;
+          }
+  
+          & .menu-item4 {
+            grid-area: item4;
+          }
+  
+          & .menu-item5 {
+            grid-area: item5;
+          }
+  
+          & .menu-item6 {
+            grid-area: item6;
+            display: block;
+          }
+        }
+  
+        & .menu-description {
+          width: 100%;
+          margin-top: 70px;
+          text-align: center;
+        }
+      }
+    }
+
+    // ABOUT
+    & .about {
+
+      & .appearance {
+        padding-top: 60vh;
+        position: relative;
+        overflow: hidden;
+
+        & div {
+          background: url(../images/cafe-gourmande-258201_1920.jpg) no-repeat;
+          background-size: cover;
+          background-position: center;
+          position: absolute;
+          top: -7vh;
+          left: 0;
+          width: 100%;
+          height: 80vh;
+        }
+      }
+
+      & > .container {
+
+        & .about-inner {
+          padding: 30px 0 70px;
+
+          & .section-headline-wrapper {
+
+              & .section-headline {
+                
+                &::before {
+                  border-top: 2px solid #333;
+                  border-left: 2px solid #333;
+                }
+                
+                &::after {
+                  border-bottom: 2px solid #333;
+                  border-right: 2px solid #333;
+                }
+              }
+          }
+
+          & .layout {
+            flex-direction: row;
+            justify-content: space-between;
+  
+            & .about-map {
+              width: 55%;
+              margin-bottom: 0;
+  
+              & iframe {
+                width: 100%;
+                height: 300px;
+                margin: 0 auto;
+                border: 3px solid #111;
+                border-radius: 10px;
+              }
+            }
+  
+            & .about-content {
+              width: 40%;
+              
+              & .flex {
+  
+                & .time {
+                  font-size: 20px;
+  
+                  & .name {
+                    text-align: center;
+                  }
+  
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    
+    // GOODS
+
+    & .goods {
+
+      & > .container {
+
+        & .goods-inner {
+
+          & .goods-list {
+            display: flex;
+            flex-direction: row;
+
+            & .goods-item {
+              width: 33%;
+              padding: 15px;
+              display: flex;
+              flex-direction: column;
+
+              & .goods-item-img {
+
+                & img {
+                  height: 260px;
+                  width: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+
+            & .goods-item + .goods-item {
+              border-left: 1px solid #efefef;
+              margin-left: 20px;
+              margin-top: 0;
+            }
+
+            
+          }
+        }
+      }
+    }
+
+    // SNS
+    & .sns {
+
+      & > .container {
+
+        & .section-main-text {
+          margin-bottom: 50px;
+        }
+
+        & .sns-inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          & .insta-area {
+            margin-bottom: 0;
+
+            & .insta-logo {
+
+              & img {
+                margin: 0;
+              }
+            }
+
+            & .insta-txt {
+              font-size: 18px;
+            }
+          }
+
+          & .twitter-area {
+
+            & .twitetr-txt {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+   // reserve.html
+   .detail {
+
+    & .container {
+
+      & .section-main-text {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 18px;
+      }
+  
+
+      & .reserve-form {
+        padding: 30px;
+        margin-bottom: 50px;
+
+        & table {
+
+          & tr {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 20px 0;
+
+            & th {
+              text-align: center;
+              padding: 10px 15px;
+              width: 25%;
+
+              & label {
+                font-size: 14px;
+              }
+            }
+
+            & td {
+              text-align: left;
+              padding: 5px;
+              width: 60%;
+
+              & .input-text, #textarea, .select {
+                width: 100%;
+                padding: 5px;
+                font-size: 14px;
+                border-radius: 5px;
+                border: 2px solid #efefef;
+              }
+
+              & .radio + .radio {
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+
+        & button {
+          display: block;
+          margin: 0 auto;
+
+          & .form-btn {
+            display: block;
+            padding: 5px; 
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    & .about-map {
+      width: 100%;
+
+      & iframe {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+      }
+    }
+
+  }
+
+  // goods.html
+  .detail {
+
+    & .d-main-visual {
+      height: 50vh;
+    }
+
+    & .container {
+
+      & .tabs {
+
+        & .tab-nav {
+          display: flex;
+          gap: 20px;
+
+          & .tab-nav-item {
+            background-color: #efefef;
+            border-radius: 5px;
+            color: #333;
+            padding: 10px 20px;
+            margin-bottom: 30px;
+
+            &.active {
+              background-color: #333;
+              color: #efefef;
+            }
+          }
+        }
+
+        & .tab-contents {
+
+          & .tab-contents-item {
+            display: none;
+            
+            & ul {
+              display: flex;
+              flex-wrap: wrap;
+              border: none;
+
+              & li {
+                padding: 20px 10px;
+                width: 33%;
+                border-left: 1px solid #efefef;
+    
+                & figure {
+                  height: 200px;
+                  margin-bottom: 10px;
+                  border-radius: 5px;
+                  overflow: hidden;
+
+                  & img {
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+              }
+
+              & li + li {
+                margin-top: 0;
+              }
+
+              & li:nth-child(n + 4) {
+                margin-top: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // menu.html
+  .detail {
+
+    & .container {
+
+      & .d-menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        border: none;
+
+        & .d-menu-item {
+          padding: 25px 15px;
+          width: 50%;
+          border-left: 1px solid #efefef;
+
+          & figure {
+            height: 300px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+
+            & img {
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        & .d-menu-item  + .d-menu-item  {
+          margin-top: 0;
+        }
+
+        & .d-menu-item:nth-child(n + 3) {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+
+
+}

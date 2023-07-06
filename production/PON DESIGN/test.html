@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">    
+<title>scrolly</title>
+	<style>
+	html {
+		scroll-behavior: smooth;
+	}
+	header {
+		height: 100px;
+		background-color: lightblue;
+		display: grid;
+		justify-content: center;
+		align-content: center;
+	}
+	section {
+		height: 500px;
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		/*分かりやすく背景色*/
+		background-color: azure;
+	}
+	section:nth-child(2n) {
+		background-color: lightgoldenrodyellow;
+	}
+	.return_top {
+		background-color: white;
+		color: black;
+		text-decoration: none;
+		position: fixed;
+		right: 30px;
+		bottom: 30px;
+		width: 40px;
+		height: 40px;
+		border: solid thin;
+		border-radius: 50%;
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		transform: rotate(-90deg);
+		transition: .4s;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.return_top.active {
+		opacity: 1;
+		visibility: visible;
+	}
+	</style>
+</head>
+
+<body>
+	<header id="top">header</header>
+	<section>セクション１</section>
+	<section>セクション２</section>
+	<section>セクション３</section>
+<!--トップへ戻るボタン-->
+	<a class="return_top" href="#top">＞</a>
+	
+<script>
+	const returnTop = document.querySelector('.return_top'); 
+	window.addEventListener('scroll', () => {
+		let scroll_Y = window.scrollY;
+		if(scroll_Y > 150) {
+		   returnTop.classList.add('active');
+		   }
+		else {
+			returnTop.classList.remove('active');
+		}
+	});
+</script>
+</body>
+</html>

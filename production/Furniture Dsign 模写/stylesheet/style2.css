@@ -1,0 +1,79 @@
+@charset "UTF-8" ;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+p {
+  font-size: 12px;
+}
+body {
+  color: #333;
+  font-size: 0.875rem;
+  min-height: 100vh;
+  height: auto;
+  
+}
+
+/* main */
+.main {
+  
+}
+
+.product {
+  display: grid;
+  grid-template:
+    " item item item item"1fr 
+    / 1fr  1fr  1fr  1fr;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+/* footer */
+.footer {  
+  height: auto;
+  margin-top: auto;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer-left {
+  display: flex;
+}
+.footer-left li {
+  margin-right: 20px;
+}
+
+
+/* メディアクエリ設定 */
+
+@media screen and (max-width:900px) {
+  .product {
+    display: grid;
+    grid-template:
+      " item item "1fr 
+      " item item "1fr 
+      / 1fr  1fr ;
+      gap: 50px;
+      margin-bottom: 40px;
+  }
+  main section a {
+    grid-area: item;
+  }
+}
+

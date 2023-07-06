@@ -1,0 +1,131 @@
+@media screen and (min-width:1192px) {
+
+  // 汎用
+  .more-wrapper {
+
+    & .more {
+      font-size: 18px;
+    }
+  }
+
+  // reserve.html
+  .detail {
+
+    & .container {
+
+      & .reserve-form {
+
+        & table {
+          margin: 0 auto;
+
+          & tr {
+
+            & th {
+              width: 20%;
+              padding: 10px 30px;
+
+              & label {
+                font-size: 18px;
+              }
+            }
+
+            & td {
+              padding: 10px 30px;
+
+              & .input-text ,#textarea, .select {
+                padding: 10px;
+                font-size: 18px;
+                border-radius: 5px;
+                border: 2px solid #efefef;
+              }
+
+              & .input-text, .select {
+                width: 300px;
+              }
+
+              & .radio + .radio {
+                margin-left: 20px;
+              }
+
+              & #textarea {
+                width: 500px;
+
+              }
+            }
+          }
+        }
+
+        & button {
+          display: block;
+          margin: 0 auto;
+
+          & .form-btn {
+            display: block;
+            padding: 10px 20px; 
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+   // goods.html
+   .detail {
+
+    & .container {
+
+      & .tabs {
+
+        & .tab-contents {
+
+          & .tab-contents-item {
+            
+            & ul {
+
+              & li {
+                padding: 20px;
+
+                & figcaption {
+                  display: flex;
+                  gap: 20px;
+
+                  & .goods-item-titile {
+                    font-size: 18px;
+                  }
+
+                  & .goods-item-price {
+                    font-size: 18px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // menu.html
+  .detail {
+
+    & .container {
+
+      & .d-menu-list {
+
+        & .d-menu-item {
+
+          & figcaption {
+  
+            & .menu-item-titile {
+              font-size: 18px;
+            }
+            
+            & .menu-item-price {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

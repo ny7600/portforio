@@ -1,0 +1,947 @@
+@media screen and (max-width:769px) {
+
+  // 共通化
+
+  .container {
+    max-width: calc(100% - (15px * 2));
+  }
+
+  .title-box {
+  
+    & .title-main {
+      font-size: 30px;
+      letter-spacing: 1px;
+    }   
+  }
+
+  .br-sp {
+    display: block;
+  }
+
+  .section-main-text {
+    font-size: 14px;
+
+  }
+
+  section {
+    padding: 40px 0 30px;
+  }
+  
+  .header {
+  
+    & .header-inner {
+      padding: 21px 20px;
+
+      & .header-logo-area {
+
+        & .header-logo {
+          width: 124px;
+        }
+      }
+
+      & .header-nav {
+        display: none;
+      }
+    }
+  }
+
+  .burger-btn {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 14px 5px;
+    position: fixed;
+    top: 5px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10001;
+
+    & span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background-color: #fff;
+      transition: all .3s;
+      
+      &:nth-child(2) {
+        position: absolute;
+        width: 79%;
+        top: 50%;
+
+      }
+      &:nth-child(3) {
+        position: absolute;
+        top: 70%;
+        width: 79%;
+      }
+    }
+
+    &.open {
+
+      & span {
+        
+        &:nth-child(1) {
+          transform: translateY(6px) rotate(-135deg);
+
+        }
+
+        &:nth-child(2) {
+        opacity: 0;
+
+        }
+        &:nth-child(3) {
+          position: absolute;
+          transform: translateY(-11px) rotate(135deg);
+        }
+      }
+    }
+  }
+
+  .burger-menu {
+    position: fixed;
+    visibility: hidden;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .burger-menu-inner {
+
+      & ul {
+        text-align: center;
+        
+        & li {
+          font-size: 15px;
+    
+          & a {
+            
+            color: #fff;
+          }
+        }
+        & li + li {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      background-image: linear-gradient(135deg, #7633a4, #250d65);
+      pointer-events: auto;
+      z-index: 10000;
+    }
+  }
+
+  // main ///////////////////////////////////////////////////
+  .main {
+    
+    & .main-visual {
+
+      & .layout {
+
+        & .main-content {
+          max-width: calc(100% - (30px * 2));
+
+          & .main-catch {
+            text-align: left;
+            margin-bottom: 30px;
+            max-width: 100%;
+
+            & h1 {
+              font-size: 40px;
+            }
+  
+            & span {
+              font-size: 16px;
+              line-height: 2;
+            }
+          }
+
+          & .btn-area {
+            margin: 0 auto 0 0;
+          }
+        }
+      }
+
+      & .scroll {
+        left: 94%;
+      }
+    }
+
+    // news ///////////////////////////////////////////////////
+    & .news {
+
+      & .container {
+        flex-direction: column;
+
+        & .title-box {
+          width: 130px;
+          margin: 0 auto 30px;
+        }
+
+        & .news-list {
+
+          & .news-item + .news-item {
+            margin-top: 40px;
+          }
+
+          & .news-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+
+            & .news-label  {
+
+              & .news-head {
+                width: 110px;
+                padding: 5px 15px;
+              }
+            }
+
+            & .news-inner {
+              display: flex;
+              align-items: flex-end;
+              width: 100%;
+
+              & .news-body {
+                font-size: 15px;
+                font-weight: 500;
+                flex: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .service {
+
+      & .container {
+
+        & .service-list {
+          flex-direction: column;
+
+          & .service-item {
+            width: 100%
+          }
+
+          & .service-item  + .service-item  {
+            margin-top: 40px
+          }
+        }
+
+        & .bg-purple {
+          margin: 60px auto 0;
+        }
+      }
+    }
+
+    // WORKS 
+    & .works {
+      width: 100%;
+      
+      &::before {
+        top: 20%;
+        width: 100%;
+        height: 80%;
+      }
+  
+      & .works-inner {
+        flex-direction: column;
+
+        & .works-slide {
+          width: 100%;
+          
+        }
+  
+        & .works-content {
+          width: 100%;
+  
+          & .main-txt-area {
+            text-align: center;
+          }
+  
+          & .main-txt + .main-txt {
+            margin-top: 15px;
+          }
+        }
+      } 
+    }
+
+     // COMPANY
+    & .company {
+      width: 100%;
+      background: url(../images/bg-cirlcle-sp.png) no-repeat;
+      background-size: cover;
+      margin: 30px 0 0;
+      padding: 10% 0 15%;
+
+      & .company-inner {
+
+        & .title-bx {
+          margin-bottom: 40px;
+        }
+
+        & .company-content {
+          width: 100%;
+          height: 100%;
+          margin: 0 auto;
+          background-position: center;
+          background-size: contain;
+      
+          
+          
+          & .main-txt-area {
+            text-align: center;
+            height: 100%;
+    
+            & .company-catch {
+              margin-bottom: 70px;
+            
+              & span {
+                background: linear-gradient(transparent 70%, #f5f534 0%);
+                font-size: 30px;
+              }
+            }
+
+            & .main-txt {
+              line-height: 2;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    & .recruit {
+      padding: 0;
+    }
+
+    & .contact {
+      padding: 60px;
+    }
+  
+  } //  main 終わり
+
+    // footer
+
+  .footer {
+    background-color: #120E19;
+    text-align: center;
+
+    & > .container {
+      padding: 40px 5% 30px 4%;
+
+      & .footer-list {
+        gap: 10px 20px;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+
+  // contact.html
+
+  .detail {
+
+    & .d-top {
+  
+      & .container {
+
+        & .d-title {
+
+          & .d-title-main {
+            font-size: 30px;
+          }
+
+          & .d-title-sub {
+            font-size: 13px;
+          }
+        }
+      }
+    } 
+    
+    & .d-form {
+
+      & .d-form-inner {
+      
+        & .container {
+          padding: 15px;
+        }
+      }
+    }
+
+    & .d-cta {
+
+      & .contact-inner {
+
+        & .title-box {
+
+          & .title-main {
+            font-size: 30px;
+          }
+
+          & .title-sub {
+            font-size: 13px;
+          }
+        }
+
+        & .main-txt-area {
+
+          & .main-txt {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  // news.html
+
+  .detail {
+
+    & .d-map {
+      background-color: #F7F7F7;
+      padding: 15px 0;
+  
+      & p {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+  
+        & a {
+          color: #391E88;
+          position: relative;
+          display: inline-block;
+          margin-right: 40px;
+          font-size: 13px;
+          font-weight: 500;
+    
+          &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 35%;
+            right: -25px;
+            width: 10px;
+            height: 1px;
+            transform: rotate(20deg);
+            background-color: #333;
+          }
+    
+          &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: 35%;
+            right: -25px;
+            width: 10px;
+            height: 1px;
+            transform: rotate(-20deg);
+            background-color: #333;
+          }
+        }
+      }
+    }
+
+    & .d-news {
+          
+      & .container {
+
+        & .title-box {
+          width: 130px;
+          margin-right: 20px;
+          text-align: left;
+          
+        }
+
+        & .news-list {
+
+          & .news-item + .news-item {
+            margin-top: 30px;
+          }
+
+          & .news-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 7px;
+
+            & .news-label  {
+
+              & .news-head {
+                width: 110px;
+                padding: 5px 15px;
+              }
+            }
+
+            & .news-inner {
+              width: 100%;
+
+              & .section-main-text {
+                font-size: 15px;
+                font-weight: 500;                
+                display: block;
+
+                /* オーバーした要素を非表示にする*/
+                overflow: hidden;
+
+                /* 改行を半角スペースに変換することで、1行にする */
+                white-space: nowrap;
+
+                /* 幅を指定しないとテキストの長さによって要素の幅が変わるため指定 */
+                max-width: 100%;
+
+                /* オーバーしたテキストを３点リーダーにする */
+                text-overflow: ellipsis;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // service.html
+  .detail {
+
+    & .d-service {
+
+      & .container {
+
+        & .d-service-list {
+
+          & .d-service-item {
+
+            & a {
+              flex-direction: column;
+    
+              & figure {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 20px;
+              }
+    
+              & figcaption {
+                width: 100%;
+                padding: 0;
+
+                & .item-title {
+                  font-size: 20px;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+
+        & .d-service-item + .d-service-item {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  // works.html
+  .detail {
+
+    & .d-works {
+
+      & .container {
+
+        & .d-works-list {
+          flex-direction: column;
+          gap: 0;
+
+          & .d-works-item {
+            width: 100%;
+            margin-top: 40px;
+          }
+
+        }
+      }
+    }
+  }
+
+  // works.html
+  .detail {
+
+    & .d-company {
+
+      & .company-inner {
+
+        & .company-content {
+
+          & .title-box {
+
+            & .title-main {
+              font-size: 32px;
+
+            }
+          }
+        }
+      }
+    }
+
+    & .d-message {
+
+      & .container {
+        flex-direction: column;
+
+        & .ceo {
+          width: 100%;
+        }
+
+        & .ceo-text {
+          width: 100%;
+
+          & .section-main-text {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // company.html
+  .detail {
+
+    & .d-company {
+
+      & .company-inner {
+
+        & .company-content {
+
+          & .title-box {
+
+            & .title-main {
+              font-size: 32px;
+
+            }
+          }
+        }
+      }
+    }
+
+    & .d-message {
+
+      & .container {
+        flex-direction: column;
+        gap: 50px;
+
+        & .ceo {
+          width: 100%;
+        }
+
+        & .ceo-text {
+          width: 100%;
+
+          & .section-main-text {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    .summary {
+
+      & .container {
+
+        & .summary-list {
+
+          & .summary-inner {
+            flex-direction: column;
+            padding: 20px 0;
+            border-bottom: 1px solid #DDDDDD;
+
+            & dt {
+              width: 100%;
+              font-size: 15px;
+              color: #333;
+              margin-bottom: 10px;
+            }
+
+            & dd {
+              width: 100%;
+              font-size: 15px;
+              color: #333;
+            }
+          
+          }
+        }
+      }
+    }
+
+    & .address {
+
+      & .container {
+  
+        & iframe {
+          width: 100%;
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  // recruit.html
+
+  .detail {
+
+    & .d-recruit {
+
+      & .container {
+        text-align: center;
+
+        & .d-title {
+          margin-bottom: 40px;
+    
+          & .d-title-main {
+            font-size: 48px;
+            color: #391E88;
+            margin-bottom: 12px;
+          }
+    
+          & .d-title-sub {
+            font-size: 18px;
+            color: #391E88;
+          }
+        }
+        
+      }
+
+
+      & .d-main-visual {
+        margin-bottom: 35px;
+      }
+    }
+
+    & .position {
+
+      & .summary {
+
+        & .container {
+
+          & .title-box {
+
+            & .title-main {
+              font-size: 24px;
+            }
+          }
+
+          & .summary-list {
+            padding: 30px 20px;
+
+            & .summary-list-title {
+
+              & h3 {
+              font-size: 16px;
+              color: #391E88;
+              }
+            }
+
+            & .summary-inner {
+
+              & ul {
+                list-style: inside;
+                margin-top: 15px;
+              }
+            }
+            
+            & .position-btn-wrap {
+              text-align: center;
+
+              & .btn-area {
+                margin-bottom: 5px;
+
+                & .btn {
+                  font-size: 15px;
+                  font-weight: normal;
+                }
+              }
+
+              & > span {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  // webmagazine.html
+
+  .inside-d {
+    
+    & .d-map {
+
+      & .container {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 20px;
+
+        & p {
+          display: inline;
+          max-width: 100%;
+
+
+        }
+
+       
+      }
+    }
+
+    & .inside-d-sec {
+
+      & .container {
+        padding: 0;
+
+        & .inside-d-title {
+          margin-bottom: 20px;
+          
+          & h1 {
+            font-size: 22px;
+            margin-bottom: 50px;
+          }
+
+          & .inside-d-title-label {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            & .news-time {
+              font-size: 13px;
+            }
+
+            & .news-head {
+              display: inline-block;
+              width: 80px;
+              font-size: 11px;
+              background-color: #E8E8E8;
+              color: #333333;
+              padding: 5px 0;
+              border-radius: 50px;
+              font-weight: 600;
+              text-align: center;
+            }
+          }
+        }
+
+        & .inside-d-card {
+          margin-bottom: 50px;
+
+          & figure {
+            margin-bottom: 30px;
+          }
+        }
+
+        & .inside-d-desc {
+
+          & .desc-head {
+            margin-bottom: 60px;
+
+            & .desc-head-title {
+              font-size: 24px;
+              padding: 5px 22px;
+              margin-bottom: 20px;
+              position: relative;
+
+              &::before {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 6px;
+                height: 38px;
+                background-color: #391E88;
+                border-radius: 4px;
+              }
+            }
+          }
+
+          & .desc-body {
+
+            & .desc-body-title {
+              font-size: 18px;
+              margin-bottom: 20px;
+            }
+
+            & .section-main-text + .section-main-text {
+              margin-top: 50px;
+            }
+          }
+        }
+
+        & .sns-btn-area {
+          margin: 40px 0 30px;
+        }
+
+        & .prev-next {
+          display: flex;
+          align-items: center;
+          border-top: 1px solid #B8AED5;
+          border-bottom: 1px solid #B8AED5;
+          padding: 13px 7px;
+          margin-bottom: 20px;
+
+          & .prev {
+            width: 50%;
+            padding: 15px;
+            color: #391E88;
+
+            & a {
+              font-size: 12px;
+            }
+          }
+
+          & .next {
+            width: 50%;
+            padding: 15px;
+            color: #391E88;
+            border-left: 1px solid #B8AED5;
+
+            & a {
+              font-size: 12px;
+            }
+          }
+        }
+
+        & .to-news {
+          text-align: center;
+          margin-bottom: 80px;
+
+          & a {
+            color: #391E88;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

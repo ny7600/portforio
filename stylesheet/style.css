@@ -1,0 +1,388 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #efefef;
+  color: #333;
+  font-family: "Darumadrop One", cursive;
+  font-family: "Julius Sans One", sans-serif;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Serif JP", serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  width: calc(100% - 50px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.under-line {
+  display: inline;
+  background-image: linear-gradient(#333, #333); /* 単色 */
+  background-size: 0 1px; /* 幅(0=見えない状態) | 高さ(=線の太さ) */
+  background-position: bottom right; /* 右下に配置 */
+  background-repeat: no-repeat;
+  padding-bottom: 2px;
+  transition: background-size cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+}
+
+.under-line:hover {
+  background-size: 100% 1px; /* 幅(100%=文字の長さ) | 高さ(=線の太さ) */
+  background-position: bottom left; /* 左下に配置 */
+}
+
+.title-area {
+  padding: 40px 0;
+  text-align: center;
+}
+.title-area .section-title {
+  font-size: 32px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: transparent;
+  max-width: 100%;
+}
+.header > .container {
+  padding: 30px 90px;
+}
+.header > .container .header-logo-area a .logo-main {
+  display: inline-block;
+  font-size: 28px;
+}
+
+.main .main-visual {
+  background-color: #efefef;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.main .main-visual h1 {
+  font-size: 75px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.main .main-visual .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.main .main-visual .wrap .block {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.2);
+  transition: all 2.5s;
+}
+.main .main-visual .mouse {
+  margin-left: -15px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  z-index: 100;
+}
+.main .main-visual .mouse::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid #000000;
+}
+.main .main-visual .mouse .mouse-wheel {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  transform: translateX(-50%);
+  animation: move-wheel 0.5s alternate infinite;
+}
+.main .main-visual .mouse .mouse-arrow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 20px;
+  height: 40px;
+  transform: translateX(-50%);
+}
+.main .main-visual .mouse .mouse-arrow::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 1px);
+  width: 1px;
+  height: 30px;
+  background-color: #000000;
+}
+.main .main-visual .mouse .mouse-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 6px);
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  transform: rotate(-45deg);
+}
+@keyframes move-wheel {
+  from {
+    transform: translateX(-50%) translateY(0);
+  }
+  to {
+    transform: translateX(-50%) translateY(5px);
+  }
+}
+.main .about {
+  padding-top: 0;
+}
+.main .about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  gap: 3%;
+}
+.main .about .container .about-person {
+  width: 30%;
+  text-align: center;
+}
+.main .about .container .about-person img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .about .container .about-txt {
+  width: 57%;
+}
+.main .about .container .about-txt .name .name-jp {
+  display: inline-block;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+.main .about .container .about-txt .name .name-en {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 20px;
+}
+.main .skills .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  gap: 3%;
+}
+.main .skills .container .skills-desc {
+  width: 57%;
+}
+.main .skills .container .skills-desc dl:first-child {
+  margin-bottom: 30px;
+}
+.main .skills .container .skills-desc dl dt {
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.main .skills .container .skills-desc dl dt::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -13px;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #333;
+}
+.main .skills .container .skills-desc dl dd {
+  font-size: 16px;
+}
+.main .skills .container .skills-image {
+  width: 30%;
+  text-align: center;
+}
+.main .skills .container .skills-image img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main .works {
+  position: relative;
+}
+.main .works::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#efefef, rgb(0, 1, 18));
+  -webkit-clip-path: circle(58.7% at 11% 17%);
+          clip-path: circle(58.7% at 11% 17%);
+  z-index: -1;
+}
+.main .works::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#efefef, rgb(0, 1, 18));
+  -webkit-clip-path: circle(29.2% at 85% 82%);
+          clip-path: circle(29.2% at 85% 82%);
+  z-index: -1;
+}
+.main .works .container .works-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4%;
+}
+.main .works .container .works-list .works-card {
+  width: 48%;
+  background-color: rgba(180, 180, 180, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+}
+.main .works .container .works-list .works-card .works-card-link {
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+.main .works .container .works-list .works-card .works-card-link .works-card-text {
+  position: relative;
+  padding: 30px 10px;
+}
+.main .works .container .works-list .works-card .works-card-link .works-card-text .works-card-num {
+  position: absolute;
+  top: -30%;
+  right: 10%;
+  font-size: 90px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.1);
+}
+.main .works .container .works-list .works-card .works-card-link .works-card-text .works-card-title {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.main .works .container .works-list .works-card .works-card-link .works-card-text .works-card-title::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10%;
+  height: 1px;
+  background-color: #878787;
+}
+.main .works .container .works-list .works-card .works-card-link .works-card-text .works-card-title .isara {
+  font-size: 12px;
+  font-weight: 400;
+}
+.main .works .container .works-list .works-card .works-card-link .works-card-text .works-card-desc {
+  font-size: 16px;
+}
+.main .contact .container .contact-form-table {
+  margin: 0 auto;
+}
+.main .contact .container .contact-form-table tr {
+  margin-bottom: 20px;
+}
+.main .contact .container .contact-form-table th, .main .contact .container .contact-form-table td {
+  padding: 10px;
+}
+.main .contact .container .contact-form-table .select, .main .contact .container .contact-form-table .name, .main .contact .container .contact-form-table .email, .main .contact .container .contact-form-table .textarea {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-width: 500px;
+  cursor: pointer;
+}
+.main .contact .container .contact-form-table .radio {
+  margin: 0 10px;
+  cursor: pointer;
+}
+.main .contact .container .button-area {
+  text-align: center;
+}
+.main .contact .container .button-area .btn {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  background-color: #333;
+  padding: 15px 60px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 0 #bbb;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.main .contact .container .button-area .btn:hover {
+  transform: translate(6px, 6px);
+  box-shadow: none;
+}
+
+.footer {
+  text-align: center;
+  background-color: #333;
+  padding: 20px 0;
+}
+.footer small {
+  color: #efefef;
+}/*# sourceMappingURL=style.css.map */

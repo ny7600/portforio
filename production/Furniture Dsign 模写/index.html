@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet/style.css">
+  <title>Products</title>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="header">
+    <div class="header-container container">
+      <div class="header-logo">
+        <h1><a href="index.html"><img src="img/logo (4).svg" alt="ロゴ"></a></h1>
+      </div>
+      <nav>
+        <div class="burger">
+        </div>
+        <div class="menu">
+          <ul class="list-nav-header">
+            <li>
+              <a href="index.html">PRODUCTS</a>
+            </li>
+            <li>
+              <a href="about.html">ABOUT</a>
+            </li>
+            <li>
+              <a href="company.html">COMPANY</a>
+            </li>
+            <li>
+              <a href="#">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="main">
+    <div class="container">
+      <h4 class="page-title">Products</h4>
+        <ul class="product">
+          <li class="item">
+            <a href="#">
+              <img src="img/item1.jpg" alt="黒い椅子">
+              <p>プロダクトタイトルプロダクトタイトル</p>
+              <p>¥99,999 +tax</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <img src="img/item2.jpg" alt="黒いソファ">
+              <p>プロダクトタイトルプロダクトタイトル</p>
+              <p>¥99,999 +tax</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <img src="img/item3.jpg" alt="木製テーブル">
+              <p>プロダクトタイトルプロダクトタイトル</p>
+              <p>¥99,999 +tax</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <img src="img/item4.jpg" alt="ライト">
+              <p>プロダクトタイトルプロダクトタイトル</p>
+              <p>¥99,999 +tax</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <img src="img/item5.jpg" alt="茶色いソファ">
+              <p>プロダクトタイトルプロダクトタイトル</p>
+              <p>¥99,999 +tax</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <img src="img/item6.jpg" alt="リラックスチェア">
+              <p>プロダクトタイトルプロダクトタイトル</p>
+              <p>¥99,999 +tax</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <img src="img/item7.jpg" alt="赤いハンモック">
+              <p>プロダクトタイトルプロダクトタイトル</p>
+              <p>¥99,999 +tax</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <img src="img/item8.jpg" alt="黄色い椅子">
+              <p>プロダクトタイトルプロダクトタイトル</p>
+              <p>¥99,999 +tax</p>
+            </a>
+          </li>
+        </ul>
+        <a class="more" href="products.html">View More</a>
+    </div>  
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <ul class="footer-left">
+        <li>
+          <a href="https://www.instagram.com/">INSTAGRAM</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/?lang=ja">TWITTER</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/campaign/landing.php?campaign_id=1665596392&extra_1=s%7Cc%7C321610682802%7Cb%7Cfacebook%7C&placement=&creative=321610682802&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1665596392%26adgroupid%3D65075436700%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-11403291%26loc_physical_ms%3D1009129%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAiA7vWcBhBUEiwAXieItg4eXbmb4YMIjF3C9_-6dLCwzbKVwrJ3eFzob-k1rv1ExXRBfglWVhoC7IEQAvD_BwE">FACEBOOK</a>
+        </li>
+      </ul>
+      <div class="footer-right">
+        <p>© Furniture Design</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- burger menu -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script>
+    $(".burger").click(function () {
+      $(".burger").toggleClass("is-active");
+      $(".menu").toggleClass("is-active");
+    });
+  </script>
+</body>
+</html>
